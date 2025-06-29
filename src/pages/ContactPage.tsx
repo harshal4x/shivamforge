@@ -12,25 +12,14 @@ const ContactPage = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Layout>
-      <SEO title={"ContactPage"} description={`Contact Information
-          Address
-          Shivam Forge
-          Bhaktanya Industrial Area,
-          Shapar (Veraval), Rajkot 360024
+    <>
+    <SEO
+      title="Contact Shivam Forge – Let's Connect"
+      description="Get in touch with Shivam Forge for forging, casting, and precision machining services. Based in Shapar, Gujarat."
+      canonicalUrl="https://www.shivamforge.com/contact"
+    />
 
-          Contact
-          Yash Patel: +91 9265772827
-          Hetvik Patel: +91 6352877378
-          Parth Patel: +91 7600066117
-          salesshivamforge@gmail.com
-          Hours
-          Monday - Friday: 9:00 AM - 6:00 PM
-
-          Saturday: 10:00 AM - 2:00 PM
-
-          Sunday: Closed`}/>
-          
+    <Layout>    
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -79,6 +68,7 @@ const ContactPage = () => {
         </div>
       </div>
     </Layout>
+    </>
   );
 };
 

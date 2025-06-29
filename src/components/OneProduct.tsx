@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import SEO from './SEO'; // adjust the path as needed
 
 type Product = {
   _id: string;
@@ -15,6 +16,11 @@ export default function ProductPage() {
   const [product, setProduct] = useState<Product | null>(null);
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const productName = `Product ${id}`; // Replace with actual lookup
+  const description = `High-quality ${productName} for industrial use. Forged with precision at Shivam Forge.`;
+  const canonicalUrl = `https://www.shivamforge.com/products/${id}`;
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -61,6 +67,16 @@ export default function ProductPage() {
   }
 
   return (
+    <>
+    {id && (
+        <SEO
+          title={`${productName} – Shivam Forge`}
+          description={description}
+          canonicalUrl={canonicalUrl}
+          indexable={false} // block indexing if needed
+        />
+    )}
+    
     <div className="w-screen h-screen flex flex-col md:flex-row overflow-y-auto scrollbar-hidden bg-gradient-to-br from-white to-blue-50 dark:from-neutral-900 dark:to-neutral-800 text-black dark:text-white">
       
       <div className="w-full md:w-1/2">
@@ -119,5 +135,6 @@ export default function ProductPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

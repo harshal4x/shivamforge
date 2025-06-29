@@ -14,7 +14,12 @@ const Index = () => {
     }, []);
   return (
     <>
-    <SEO title={"Process page"} description={`Manufacturing Process Flow A leader in forging and casting solutions with unmatched quality and innovation`} />
+    <SEO
+      title="Manufacturing Process – Shivam Forge"
+      description="Understand our forging and casting process including raw material handling, die making, and CNC machining."
+      canonicalUrl="https://www.shivamforge.com/process"
+    />
+
     <Layout>
       <div className="bg-gradient-to-r from-forge-orange to-forge-red py-20 px-4">
         <div className="container mx-auto text-center">

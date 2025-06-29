@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import SEO from "@/components/SEO";
 
 const NotFound = () => {
   const location = useLocation();
@@ -12,6 +13,13 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
+    <>
+    <SEO
+    title="Page Not Found – Shivam Forge"
+    description="The page you're looking for doesn't exist. Return to the homepage or explore our products."
+    canonicalUrl="https://www.shivamforge.com/404"
+    indexable={false}
+  />
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">404</h1>
@@ -21,6 +29,7 @@ const NotFound = () => {
         </a>
       </div>
     </div>
+    </>
   );
 };
 

@@ -30,12 +30,14 @@ const AboutPage = () => {
 };
 
   return (
-    <Layout>
-      <SEO
-        title="AboutPage"
-        description="Shivam Forge is a leader in forging and casting with synergy, innovation, and global reach."
-      />
+    <>
+    <SEO
+      title="About Shivam Forge – Leaders in Forging"
+      description="Learn more about Shivam Forge's journey, mission, and dedication to delivering quality forged and casted components."
+      canonicalUrl="https://www.shivamforge.com/about"
+    />
 
+    <Layout>
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
@@ -229,6 +231,7 @@ const AboutPage = () => {
         </motion.div>
       </div>
     </Layout>
+    </>
   );
 };
 

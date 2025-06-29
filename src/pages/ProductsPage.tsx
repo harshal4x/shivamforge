@@ -60,7 +60,12 @@ const ProductsPage = () => {
 
   return (
     <>
-    <SEO title={"Product page"} description={`Our Products Explore our range of high-quality forging and casting products for various industries`}/>
+    <SEO
+      title="Our Products – Shivam Forge"
+      description="View our range of forged and casted products designed for industrial, automotive, and agricultural applications."
+      canonicalUrl="https://www.shivamforge.com/products"
+    />
+
     <Layout>
       <div className="bg-gradient-to-r from-forge-orange to-forge-red py-20 px-4">
         <div className="container mx-auto text-center">
