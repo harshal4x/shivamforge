@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /products/
+Sitemap: https://www.shivamforge.com/sitemap.xml
